@@ -1,0 +1,53 @@
+/* Custom styles for Online Examination System */
+body{
+     margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f9;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+}
+
+/* Exam Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive Typography */
+h1.display-4 {
+    font-size: calc(1.5rem + 2vw);
+}
+
+.lead {
+    font-size: calc(1rem + 0.5vw);
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+}
+
+/* Ensure proper spacing on smaller devices */
+@media (max-width: 576px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}

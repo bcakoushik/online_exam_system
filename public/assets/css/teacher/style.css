@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+:root {
+            --primary-bg: #0F4C75;
+            --secondary-bg: #3282B8;
+        }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+}
+
+li {
+    list-style: none;
+
+}
+
+h4 {
+   font-family: 'Montserrat', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+
+/* Layout for admin dashboard skeleton */
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    background: var(--primary-bg);
+    transition: all 0.35s ease-in-out;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+    background: var(#0F4C75);
+}
+
+/* Sidebar Elements Style */
+
+.sidebar-logo {
+    padding: 1.15rem;
+}
+
+.sidebar-logo a {
+    color: #e9ecef;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar-header {
+    color: #e9ecef;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #e9ecef;
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+}
+
+/* .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+    vertical-align: middle;
+    
+
+    
+} */
+.collapse-icon {
+    transition: transform .8s ease;
+}
+
+.sidebar-link[aria-expanded="true"] .collapse-icon {
+    transform: rotate(180deg);
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .8s ease-in-out;
+}
+
+.dropdown-bg{
+    background-color: #3282B8 !important;
+  
+}
+
+.dropdown-item{
+    color: #e9ecef !important;
+}
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #0f4c75;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dropdown-item:hover {
+  /* background-color: #e0f3ff; */
+  color: #00fff2 !important;
+}
+
+
+.avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-expand .navbar-nav {
+    margin-left: auto;
+}
+
+/* Main container  */
+.form-container{
+    background-color: rgb(250, 250, 250) !important;
+   
+}
+.custom-form-label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: 0.5px;
+}
+
+/* ───────── Base style ───────── */
+input[type="text"],
+input[type="datetime-local"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box !important;
+  border-radius: 0 !important;
+  background-color: white !important;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
+  color: #0F4C75 !important;
+  font-weight: 500;
+
+  border: none !important;
+  border-bottom: 1px solid #0F4C75 !important;
+}
+
+/* ───────── Focus (light theme) ───────── */
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border: none !important;
+  border-bottom: 2px solid #0F4C75 !important;
+  box-shadow: 0 1px 0 0 #007bff !important;
+}
+
+/* ───────── Custom Button CSS ───────── */
+.custom-submit-button{
+    width: 50% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    
+}
+html[data-bs-theme="dark"] .custom-submit-button{
+    background-color: #ffd900 !important;
+    color: rgb(1, 1, 1) !important;
+}
+
+/* ───────── Dark theme base ───────── */
+html[data-bs-theme="dark"] input[type="text"],
+html[data-bs-theme="dark"] input[type="datetime-local"],
+html[data-bs-theme="dark"] input[type="number"],
+html[data-bs-theme="dark"] textarea,
+html[data-bs-theme="dark"] select {
+  background-color: rgb(1, 1, 1) !important;
+  color: #ffd900 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  border-bottom: 1px solid #ffee00 !important;
+}
+
+/* ───────── Dark theme focus ───────── */
+html[data-bs-theme="dark"] input[type="text"]:focus,
+html[data-bs-theme="dark"] input[type="datetime-local"]:focus,
+html[data-bs-theme="dark"] input[type="number"]:focus,
+html[data-bs-theme="dark"] textarea:focus,
+html[data-bs-theme="dark"] select:focus {
+  border-bottom: 2px solid rgb(255, 217, 0) !important;
+  box-shadow: 0 1px 0 0 rgb(255, 183, 0) !important;
+}
+
+
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
+}
+.footer{
+    background: var(--secondary-bg);
+}
+.footer ul li a{
+    color: #ffffff;
+}
+
+@media (min-width:768px) {
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+    margin-bottom: 24px;
+}
+
+.illustration {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+/* Sidebar Toggle */
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+/* Footer and Nav */
+
+@media (max-width:767.98px) {
+
+    .js-sidebar {
+        margin-left: -264px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+
+    .navbar,
+    footer {
+        width: 100vw;
+    }
+}
+
+/* Theme Toggler */
+
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-65%);
+    text-align: center;
+    z-index: 10;
+    right: 0;
+    left: auto;
+    border: none;
+    background-color: var(--bs-body-color);
+}
+
+html[data-bs-theme="dark"] .theme-toggle .fa-sun,
+html[data-bs-theme="light"] .theme-toggle .fa-moon {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    font-size: 1.25rem;
+    color: #FFF;
+}
+
+html[data-bs-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
+}
+
+html[data-bs-theme="light"] .theme-toggle .fa-sun {
+    display: none;
+}
+
+
+
+/* Responsives */
+/* For screens ≤ 768px (tablets and below) */
+@media (max-width: 768px) {
+    .form-container {
+        width: 100% !important;
+    }
+}
+
+/* For screens ≤ 576px (mobile phones) */
+@media (max-width: 576px) {
+    .form-container {
+        width: 100% !important;
+    }
+    .custom-submit-button{
+    width: 100% !important;
+}
+}
+@media (max-width: 991px) {
+    .form-container {
+        width: 100% !important;
+    }
+}
